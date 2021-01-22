@@ -87,30 +87,26 @@ textarea {
    Author's custom styles
    ========================================================================== */
 
-.attribution { font-size: 11px; text-align: center; }
-.attribution a { color: hsl(228, 45%, 44%); }
-
 body {
-  background: hsl(185, 75%, 39%);
-  /*
-  url('../img/bg-pattern-top.svg'), url('../img/bg-pattern-bottom.svg')
-  */
-  display:flex;
+  background: url('../img/bg-pattern-top.svg'), url('../img/bg-pattern-bottom.svg'), hsl(185, 75%, 39%);
+  background-repeat: no-repeat;
+  background-position: bottom 50vh right 50vw, top 50vh left 50vw;
+  display: flex;
   justify-content: center;
   align-items: center;
   flex-flow: column wrap;
   color: hsl(0, 0%, 59%);
   font-family: 'Kumbh Sans', sans-serif;
+  min-height: 100vh;
 }
 
 main {
   border-radius: 20px;
   background: url('../img/bg-pattern-card.svg') white repeat-x;
-  margin-top: 50px;
 }
 
 figure {
-  display:flex;
+  display: flex;
   justify-content: center;
   align-items: center;
   padding-top: 70px;
@@ -122,7 +118,7 @@ figure {
 }
 
 .profile {
-  display:flex;
+  display: flex;
   justify-content: center;
   align-items: center;
   flex-flow: column wrap;
@@ -141,10 +137,11 @@ figure {
 
 .profile p {
   margin: 10px;
+  font-size: 14px;
 }
 
 #stats {
-  display:flex;
+  display: flex;
   justify-content: center;
   align-items: center;
   flex-flow: row wrap;
@@ -158,29 +155,32 @@ figure {
   padding: 10px 20px;
 }
 
-.stats-item h2 {
+.number {
   margin: 0;
   font-size: 18px;
+  font-weight: 700;
   color: hsl(229, 23%, 23%);
 }
 
-.stats-item p {
-  margin-top: 5px;
-  font-size: 12px;
+.name {
+  margin-top: 1px;
+  font-size: 10px;
   letter-spacing: 2px;
 }
 
 .attribution {
-  display:flex;
+  display: flex;
   justify-content: center;
   align-items: flex-end;
   flex-flow: row wrap;
-  padding-top:10px;
+  padding-top: 10px;
 }
 
 .attribution p, .attribution a {
   color: Azure;
   text-decoration: none;
+  text-align: center;
+  font-size: 11px;
 }
 
 /* ==========================================================================
@@ -270,11 +270,6 @@ figure {
    These examples override the primary ('mobile first') styles.
    Modify as content requires.
    ========================================================================== */
-
-@media screen and (min-width: 1400px) {
-
-
-}
 
 @media only screen and (min-width: 35em) {
   /* Style adjustments for viewports that meet the condition */
